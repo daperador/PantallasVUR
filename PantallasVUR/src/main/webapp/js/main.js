@@ -1,0 +1,1 @@
+var runtConsulta = angular.module('runtConsulta', ['ngRoute']);

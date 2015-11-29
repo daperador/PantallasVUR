@@ -1,0 +1,163 @@
+<div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Consulta General del Inmueble - Datos Básicos del Inmueble</div>
+        <div class="panel-body">
+            <p class="responsive-text">Los campos marcados con * son requeridos</p>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <label for="selectDepartamento">Departamento<span class="required">*</span></label>
+                    <select id="selectDepartamento" class="form-control" ng-required="true" >
+                        <option>Todos</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <label for="selectMunicipio">Municipio<span class="required">*</span></label>
+                    <select id="selectMunicipio" class="form-control" ng-required="true">
+                        <option>Todos</option>
+                    </select>
+
+                </div>
+            </div>
+        </div>
+    </div>	
+    <div class="panel panel-primary">
+        <div class="panel-heading">Seleccione el Criterio de B&uacute;squeda</div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                    <label for="criterio">Criterio de b&uacute;squeda<span class="required">*</span></label>
+                    <select id="criterio" class="form-control" ng-required="true">
+                        <option>Documento</option>
+                    </select>
+                </div>
+            </div>
+            <br/>
+            <div class="panel panel-default">
+                <div class="panel-heading">Matr&iacute;cula</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="circulo">C&iacute;rculo Registral</label>
+                        <select id="circulo" class="form-control">
+                            <option>Documento</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="matricula">N&uacute;mero de Matr&iacute;cula inmobiliaria</label>
+                        <input type="text" id="matricula" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Documento</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="tipoDocumento">Tipo de Identificaci&oacute;n</label>
+                        <select id="tipoDocumento" class="form-control">
+                            <option>Documento</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="numeroDocumento">N&uacute;mero de Identificaci&oacute;n</label>
+                        <input type="text" id="numeroDocumento" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Referencia Catastral</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="referenciaCatastral">Referencia Catastral</label>
+                        <input type="text" id="referenciaCatastral" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">C&eacute;dula Catastral</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="cedulaCatastral">C&eacute;dula Catastral</label>
+                        <input type="text" id="cedulaCatastral" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Datos del Propietario Natural</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="primerNombre">Primer Nombre</label>
+                        <input type="text" id="primerNombre" class="form-control"/>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="segundoNombre">Segundo Nombre</label>
+                        <input type="text" id="segundoNombre" class="form-control"/>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="primerApellido">Primer Apellido</label>
+                        <input type="text" id="primerApellido" class="form-control"/>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="segundoApellido">Segundo Apellido</label>
+                        <input type="text" id="segundoApellido" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">Datos Propietario Jur&iacute;dico</div>
+                <div class="panel-body">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label for="razonSocial">Raz&oacute;n Social</label>
+                        <input type="text" id="razonSocial" class="form-control"/>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-group">
+                <input type="submit" class="btn btn-danger" value="Buscar inmueble">
+            </div>
+        </div>	
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Consulta General del Inmueble - Datos Básicos del Inmueble</div>
+        <div class="panel-body">
+            <table class="table-condensed table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <td>Consultar</td>
+                        <td>Propietario</td>
+                        <td>Tipo Identificaci&oacute;n</td>
+                        <td>Numero de identificacion</td>
+                        <td>Direccion del inmueble</td>
+                        <td>Numero de matricula inmobiliaria</td>
+                        <td>Referencia Catastral</td>
+                        <td>Departamento</td>
+                        <td>Municipio</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: center;"><a>CONSULTAR</a><img class="img-warn" src="./img/warning-icon-hi.png" alt="La matricula esta desincronizada" title="La matricula esta desincronizada"/></td>
+                        <td>DANIEL ALEXANDER APERADOR MANCIPE</td>
+                        <td>CEDULA CIUDADANIA</td>
+                        <td>1049604766</td>
+                        <td>KR 46 163B 41 IN 4 AP 503 (DIRECCION CATASTRAL)</td>
+                        <td>50N-20525680</td>
+                        <td>AAA0200WZBS</td>
+                        <td>BOGOTÁ D.C.</td>
+                        <td>BOGOTÁ, D.C.</td>
+                    </tr>
+                    <tr>
+                        <td><a>CONSULTAR</a></td>
+                        <td>DANIEL ALEXANDER APERADOR MANCIPE</td>
+                        <td>CEDULA CIUDADANIA</td>
+                        <td>1049604766</td>
+                        <td>KR 46 163B 41 IN 4 AP 503 (DIRECCION CATASTRAL)</td>
+                        <td>50N-20525680</td>
+                        <td>AAA0200WZBS</td>
+                        <td>BOGOTÁ D.C.</td>
+                        <td>BOGOTÁ, D.C.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

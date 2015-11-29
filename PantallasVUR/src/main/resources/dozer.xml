@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.CriteriosBusqueda</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.CriteriosBusquedaDTO</class-b>   
+  </mapping>  
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.Departamento</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.DepartamentoDTO</class-b>   
+  </mapping>
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.Municipio</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.MunicipioDTO</class-b>   
+  </mapping>
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.Oficina</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.OficinaDTO</class-b>   
+  </mapping>
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.TipoDocumento</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.TipoDocumentoDTO</class-b>   
+  </mapping>
+</mappings> 

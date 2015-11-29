@@ -1,0 +1,143 @@
+html{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg-sitio.jpg");
+}
+
+.row{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.wrapper > div{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.responsive-text{
+    font-size: 1.3vw;
+}
+
+.wrapper > div p{
+    text-align: left;
+    padding: 0 10px;
+    vertical-align: top;
+    margin: 2vh auto;
+}
+
+.wrapper > div .required{
+    color: #bd021c;
+}
+
+.wrapper > div select,
+.wrapper > div label,
+.wrapper > div input{
+    vertical-align: top;
+    margin: 3px 0;
+}
+
+.styled-select {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    padding: 0;
+    position: relative;
+}
+
+.styled-select i{
+    font-size: 2em;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.wrapper > div .styled-select select{
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+@media (min-width: 1600px){
+    .responsive-text{
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1024px){
+    .wrapper > div{
+        width: 85%;
+    }
+
+    .responsive-text{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 640px){
+    .wrapper{
+        overflow-x: hidden;
+        overflow-y: scroll; 
+    }
+
+    .wrapper > div{
+        width: 95%;
+    }
+}
+
+.panel-primary {
+    border-color: #bd021c;
+}
+.panel-primary > .panel-heading {
+    background-color: #bd021c;
+    border-color: #bd021c;
+    color: #fff;
+}
+
+.panel-default {
+    border-color: #d0d0ff;
+}
+
+.panel-default > .panel-heading {
+    background-color: #d0d0ff;
+    border-color: #ddd;
+    color: #333;
+}
+
+.table thead {
+    background-color: #bd021c;
+    color: #fff;
+    text-align: center;
+}
+
+.table thead > tr > td{
+    vertical-align: middle;
+}
+
+.table tbody > tr > td{
+    vertical-align: middle;
+}
+
+.img-warn{
+    width: 20px;
+    height: 20px;
+}
