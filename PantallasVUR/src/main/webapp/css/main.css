@@ -8,6 +8,8 @@ body{
     width: 100%;
     height: 100%;
     background-image: url("../img/bg-sitio.jpg");
+    background-color: #FFFFFF;
+    background-repeat: repeat-x;
 }
 
 .row{
@@ -108,19 +110,23 @@ body{
     border-color: #bd021c;
 }
 .panel-primary > .panel-heading {
-    background-color: #bd021c;
-    border-color: #bd021c;
-    color: #fff;
+    /*background-color: #bd021c;*/
+    background-color: #FFF;
+    border-color: #FFF;
+    color: #bd021c;
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .panel-default {
-    border-color: #d0d0ff;
+    border-color: #CCC;
 }
 
 .panel-default > .panel-heading {
-    background-color: #d0d0ff;
-    border-color: #ddd;
-    color: #333;
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #000;
+    font-weight: bolder;
 }
 
 .table thead {
