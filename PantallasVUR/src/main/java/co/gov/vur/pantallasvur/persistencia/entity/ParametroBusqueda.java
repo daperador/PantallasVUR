@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package co.gov.vur.pantallasvur.persistencia.entity;
 
 import javax.persistence.Column;
@@ -18,21 +17,21 @@ import javax.persistence.Table;
  * @author Daniel
  */
 @Entity
-@Table(name = "CIRCULO_REGISTRAL")
+@Table(name = "PARAMETROS_BUSQUEDA")
 @NamedQueries({
-    @NamedQuery(name = "oficina.getAll", query = "select o from Oficina o order by o.nombre")
+    @NamedQuery(name = "ParametroBusqueda.getAll", query="SELECT e from ParametroBusqueda e where e.estado='A'")
 })
-public class Oficina {
+public class ParametroBusqueda {
     
     @Id
-    @Column(name = "ID_CIRCULO_REGISTRAL")
+    @Column(name = "ID_PARAMETRO_BUSQUEDA")
     private Long id;
     
-    @Column(name = "CIRCULO")
-    private String circulo;
-    
-    @Column(name = "DESCRIPCION_CIRCULO")
+    @Column(name = "NOMBRE")
     private String nombre;
+    
+    @Column(name = "ESTADO")
+    private String estado;
 
     public Long getId() {
         return id;
@@ -40,14 +39,6 @@ public class Oficina {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getCirculo() {
-        return circulo;
-    }
-
-    public void setCirculo(String circulo) {
-        this.circulo = circulo;
     }
 
     public String getNombre() {
@@ -58,5 +49,13 @@ public class Oficina {
         this.nombre = nombre;
     }
 
-                
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+    
+    
 }

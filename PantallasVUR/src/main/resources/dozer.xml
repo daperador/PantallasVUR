@@ -17,10 +17,14 @@
   </mapping>
   <mapping> 
     <class-a>co.gov.vur.pantallasvur.persistencia.entity.Oficina</class-a>
-    <class-b>co.gov.vur.pantallasvur.dto.OficinaDTO</class-b>   
+    <class-b>co.gov.vur.pantallasvur.dto.OficinaDTO</class-b>
   </mapping>
   <mapping> 
     <class-a>co.gov.vur.pantallasvur.persistencia.entity.TipoDocumento</class-a>
     <class-b>co.gov.vur.pantallasvur.dto.TipoDocumentoDTO</class-b>   
+  </mapping>
+  <mapping> 
+    <class-a>co.gov.vur.pantallasvur.persistencia.entity.ParametroBusqueda</class-a>
+    <class-b>co.gov.vur.pantallasvur.dto.ParametroBusquedaDTO</class-b>   
   </mapping>
 </mappings> 

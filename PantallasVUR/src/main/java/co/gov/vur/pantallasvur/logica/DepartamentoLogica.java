@@ -23,9 +23,6 @@ public class DepartamentoLogica {
     @EJB
     private DepartamentoPersistencia departamentoPersistencia;
     
-    public List<DepartamentoDTO> getDepartamentos(){
-        return DozerFactory.getInstance().map(
-                departamentoPersistencia.getDepartamentos(),DepartamentoDTO.class);
-    }
+    
     
 }

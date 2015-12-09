@@ -21,9 +21,5 @@ public class MunicipioPersistencia {
     @PersistenceContext
     private EntityManager em;
 
-    public List<Municipio> getMunicipios(String idDepartamento) {
-        return em.createNamedQuery("municipio.getByDepartamento")
-                .setParameter("departamento", idDepartamento)
-                .getResultList();
-    }
+    
 }

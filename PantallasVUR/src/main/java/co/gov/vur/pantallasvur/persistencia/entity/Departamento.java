@@ -21,7 +21,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "DEPARTAMENTO")
 @NamedQueries({
-    @NamedQuery(name = "departamento.getAll", query = "select d from Departamento d order by d.nombre")
+    @NamedQuery(name = "departamento.getAll", query = "select d from Departamento d where d.id!='00' order by d.nombre")
 })
 public class Departamento {
     

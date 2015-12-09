@@ -25,9 +25,6 @@ public class MunicipioLogica {
     @EJB
     private MunicipioPersistencia municipioPersistencia;
     
-    public List<MunicipioDTO> getMunicipios(String idDepartamento){
-        return DozerFactory.getInstance().map(
-                municipioPersistencia.getMunicipios(idDepartamento),MunicipioDTO.class);
-    }
+    
     
 }

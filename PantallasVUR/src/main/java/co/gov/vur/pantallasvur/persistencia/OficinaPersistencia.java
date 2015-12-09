@@ -23,8 +23,6 @@ public class OficinaPersistencia {
     @PersistenceContext
     private EntityManager em;
     
-    public List<Oficina> getOficinas(){
-        return em.createNamedQuery("oficina.getAll").getResultList();
-    }
+    
     
 }

@@ -3,18 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package co.gov.vur.pantallasvur.dto;
 
 /**
  *
  * @author Daniel
  */
-public class OficinaDTO {
-    
+public class ParametroBusquedaDTO {
     private Long id;
-    private String circulo;
     private String nombre;
+    private String estado;
 
     public Long getId() {
         return id;
@@ -24,14 +22,6 @@ public class OficinaDTO {
         this.id = id;
     }
 
-    public String getCirculo() {
-        return circulo;
-    }
-
-    public void setCirculo(String circulo) {
-        this.circulo = circulo;
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -39,7 +29,14 @@ public class OficinaDTO {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
     
     
 }

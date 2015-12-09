@@ -1,19 +1,22 @@
 <div>
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" ng-show="pantallaFiltros">
         <div class="panel-heading">Consulta General del Inmueble - Datos Básicos del Inmueble</div>
         <div class="panel-body">
             <p class="responsive-text">Los campos marcados con * son requeridos</p>
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="selectDepartamento">Departamento<span class="required">*</span></label>
-                    <select id="selectDepartamento" class="form-control" ng-required="true" >
-                        <option>Todos</option>
+                    <select id="selectDepartamento" class="form-control" ng-required="true" 
+                            ng-model="datosFormulario.departamento"
+                            ng-options="option.nombre for option in departamentos track by option.id"
+                            ng-change="getMunicipios(datosFormulario.departamento)">
                     </select>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     <label for="selectMunicipio">Municipio<span class="required">*</span></label>
-                    <select id="selectMunicipio" class="form-control" ng-required="true">
-                        <option>Todos</option>
+                    <select id="selectMunicipio" class="form-control" ng-required="true"
+                            ng-model="datosFormulario.municipio"
+                            ng-options="option.nombre for option in municipios track by option.id">
                     </select>
 
                 </div>
@@ -26,19 +29,24 @@
             <div class="row">
                 <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <label for="criterio">Criterio de b&uacute;squeda<span class="required">*</span></label>
-                    <select id="criterio" class="form-control" ng-required="true">
-                        <option>Documento</option>
+                    <select id="criterio" class="form-control" 
+                            ng-required="true"  
+                            ng-model="datosFormulario.parametroBusqueda"
+                            ng-options="option.nombre for option in parametrosBusqueda track by option.id"
+                            ng-change="tipoConsulta(datosFormulario.parametroBusqueda)">
+                        
                     </select>
                 </div>
             </div>
             <br/>
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.matricula">
                 <div class="panel-heading">Matr&iacute;cula</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <label for="circulo">C&iacute;rculo Registral</label>
-                        <select id="circulo" class="form-control">
-                            <option>Documento</option>
+                        <select id="circulo" class="form-control"
+                                ng-model="datosFormulario.circuloRegistral"
+                                ng-options="option.nombre for option in circulosRegistrales track by option.id">
                         </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -48,13 +56,14 @@
                 </div>
             </div>
 
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.documento">
                 <div class="panel-heading">Documento</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                         <label for="tipoDocumento">Tipo de Identificaci&oacute;n</label>
-                        <select id="tipoDocumento" class="form-control">
-                            <option>Documento</option>
+                        <select id="tipoDocumento" class="form-control"
+                                ng-model="datosFormulario.tipoDocumento"
+                                ng-options="option.nombre for option in tipoDocumentos track by option.id">
                         </select>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -63,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.referenciaCatastral">
                 <div class="panel-heading">Referencia Catastral</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -72,7 +81,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.cedulaCatastral">
                 <div class="panel-heading">C&eacute;dula Catastral</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -81,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.propietarioNatural">
                 <div class="panel-heading">Datos del Propietario Natural</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -102,7 +111,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default">
+            <div class="panel panel-default" ng-show="controlPantalla.propietarioJuridico">
                 <div class="panel-heading">Datos Propietario Jur&iacute;dico</div>
                 <div class="panel-body">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -111,12 +120,12 @@
                     </div>
                 </div>
             </div>
-            <div class="btn-group">
-                <input type="submit" class="btn btn-danger" value="Buscar inmueble">
+            <div class="btn-group pull-right">
+                <input type="submit" class="btn btn-danger" value="Buscar inmueble" ng-click="buscarInmueble()">
             </div>
         </div>	
     </div>
-    <div class="panel panel-primary">
+    <div class="panel panel-primary" ng-show="pantallaBusqueda">
         <div class="panel-heading">Consulta General del Inmueble - Datos Básicos del Inmueble</div>
         <div class="panel-body">
             <table class="table-condensed table table-striped table-bordered">

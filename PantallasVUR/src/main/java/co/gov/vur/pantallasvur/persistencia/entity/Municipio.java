@@ -23,6 +23,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "MUNICIPIO")
 @NamedQueries({
+    @NamedQuery(name = "municipio.getAll", query = "select m from Municipio m where m.vur=1 order by m.nombre"),
     @NamedQuery(name = "municipio.getByDepartamento", query = "select m from Municipio m where m.departamento.id=:departamento and m.vur=1 order by m.nombre")
 })
 public class Municipio {

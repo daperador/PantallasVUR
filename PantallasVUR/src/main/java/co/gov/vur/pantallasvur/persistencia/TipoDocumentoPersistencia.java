@@ -23,8 +23,6 @@ public class TipoDocumentoPersistencia {
     @PersistenceContext
     private EntityManager em;
     
-    public List<TipoDocumento> getCriteriosBusqueda(){
-        return em.createNamedQuery("tipoDocumento.getAll").getResultList();
-    }
+    
     
 }
